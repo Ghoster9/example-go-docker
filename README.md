@@ -29,7 +29,7 @@ CMD ["go", "run", "/app/main.go"]
 ```
 
 Maka saat dijalan proses akan seperti `go run main.go`
-Sedangkan `/app/main.go merupakan file dalam images nantinya.
+Sedangkan `/app/main.go merupakan` file dalam images nantinya.
 
 Untuk mem build dilakukan perintah
 
@@ -49,8 +49,14 @@ docker container create --name app1 -p 8080:8080 app-golang:1.0
 
 ini akan di direct ke port 8080: yang didalam docker juga 8080.
 
-Untuk menjalankan maka
+Untuk menjalankan maka:
 
 ```sh
 docker container start app1
+```
+
+Untuk memberhentikan
+
+```sh
+docker container stop app1
 ```
