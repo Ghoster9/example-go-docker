@@ -60,3 +60,31 @@ Untuk memberhentikan
 ```sh
 docker container stop app1
 ```
+
+---
+
+Push images to Registry(hub)
+
+Untuk menjalankan kita perlu melihat jika sebelumnya docker telah membundle dengan baik aplikasi kita.
+
+Kemudian kita bisa membuat Create repository di [hub](https://hub.docker.com/repositories)
+
+Pastikan nama images docker sama dengan nama dengan nama repository yang ada di hub
+
+untuk Upload di local dengan username
+
+```sh
+docker tag app-golang:1.0 ahmadzky08/app-golang:1.0
+```
+
+agar membuat images di local dengan username/NAMAIMAGES:TAGS
+
+Agar bisa dilihat di hub maka dapat
+
+```sh
+docker push ahmadzky08/app-golang:1.0
+```
+
+Untuk push ke registry
+
+Jangan khawatir jika file images besar itu dikarenakan ada package golang di dalamnya. Pada saat ki push ke hub/registry maka ia akan mengambil file golang dari library yang sudah ada tanpa perlu mengupload golang yang ada pada mechine kita.
